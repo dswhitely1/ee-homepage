@@ -1,10 +1,9 @@
 node {
     stage('Build API Image') {
         checkout scm
-        def apiImage = docker.build('api', './api')
-        apiImage.inside {
-            sh 'node --version'
-        }
+        def apiImage = docker.build('api:${env.BUILD_ID}', './api')
+        apiImage.push()
+        apiImage.push('latest')
     }
     stage('Build Client Image') {
         checkout scm
@@ -12,5 +11,7 @@ node {
         clientImage.inside {
             sh 'node --version'
         }
+        clientImage.push()
+        clientImage.push('latest')
     }
 }
