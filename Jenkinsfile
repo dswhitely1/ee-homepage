@@ -1,4 +1,4 @@
-node('docker') {
+node {
     stage('Build API Image') {
         checkout scm
         def apiImage = docker.build('api', './api')
