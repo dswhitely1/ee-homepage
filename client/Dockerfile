@@ -1,6 +1,6 @@
-FROM node:14.16.1-alpine
+FROM node:14.16.1-alpine as Builder
 
-WORKDIR /usr/src/app
+WORKDIR /tmp
 
 COPY package*.json ./
 
@@ -8,4 +8,12 @@ RUN npm install
 
 COPY . .
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "build"]
+
+FROM nginx
+
+WORKDIR /usr/share/nginx/html
+COPY --from=builder /tmp/build .
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
