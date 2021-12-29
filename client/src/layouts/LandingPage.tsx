@@ -1,7 +1,7 @@
 import { NavbarBase, LandingPageButtons } from "../components";
 import { useState } from "react";
 import { ButtonProps } from "@material-ui/core";
-import { PhoneNumber, Header } from "../views";
+import { PhoneNumber, Header, About } from "../views";
 
 interface IButtonProps {
   color: ButtonProps["color"];
@@ -35,6 +35,7 @@ export const LandingPage = () => {
       <div>
         <PhoneNumber />
         <Header />
+        <About />
       </div>
     </>
   );
