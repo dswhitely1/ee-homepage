@@ -1,0 +1,25 @@
+{
+  "name": "ee2022-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dswhitely1/ee-homepage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dswhitely1/ee-homepage/issues"
+  },
+  "homepage": "https://github.com/dswhitely1/ee-homepage#readme",
+  "devDependencies": {
+    "husky": "^7.0.0",
+    "pretty-quick": "^3.1.3"
+  }
+}
