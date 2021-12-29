@@ -34,7 +34,7 @@ export const Footer = () => {
           left: true,
         },
         {
-          text: '7520 E. Pennington St. NE',
+          text: '7525 Main St. NE',
           left: true,
         },
         {
