@@ -1,7 +1,7 @@
-import { NavbarBase } from "../components";
-import { LandingPageButtons } from "../components/Buttons";
+import { NavbarBase, LandingPageButtons } from "../components";
 import { useState } from "react";
 import { ButtonProps } from "@material-ui/core";
+import { PhoneNumber, Header } from "../views";
 
 interface IButtonProps {
   color: ButtonProps["color"];
@@ -22,7 +22,7 @@ export const LandingPage = () => {
     sections.map((section) => ({
       color: "inherit",
       variant: "text",
-      link: `${section}.toLowerCase()`,
+      link: `#${section.toLowerCase()}`,
       desc: section,
     }))
   );
@@ -32,6 +32,10 @@ export const LandingPage = () => {
         buttons={<LandingPageButtons buttons={buttons} />}
         drawerButtons={<LandingPageButtons buttons={buttons} drawerButtons />}
       />
+      <div>
+        <PhoneNumber />
+        <Header />
+      </div>
     </>
   );
 };

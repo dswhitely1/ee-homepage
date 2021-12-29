@@ -2,17 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "./providers";
 import reportWebVitals from "./reportWebVitals";
-import {LandingPage} from "./layouts";
-import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { LandingPage } from "./layouts";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
-        <Router>
-            <Routes>
-                <Route path='/' element={<LandingPage />} />
-            </Routes>
-        </Router>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
